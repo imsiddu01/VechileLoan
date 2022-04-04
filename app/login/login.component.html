@@ -1,0 +1,42 @@
+  <div align="center"><h2> HELLO USER!</h2>
+<br>
+  <a routerLink="/addUsers" class="btn btn-primary " role="button" style="font-size: 20px;" routerLinkActive="active"> Register As New User</a>
+<br><br>
+<img src="../assets/img/userloanimage.jpg" width="650px" height="400px" />
+<img src="../assets/img/image1.jpeg" width="650px" height="400px" />
+
+<hr>
+  <div class="col-md-2 col-md-offset-2">
+    <h3>Login</h3>
+       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="userId"> User Id:</label>
+        <input type="userId" class="form-control" formControlName="userId" id="userId">
+        <div *ngIf="submitted && loginForm.controls.userId.errors" class="error">
+          <div class="text-danger" *ngIf="loginForm.controls.userId.errors.required">User id is required</div>
+        </div>
+      
+      </div>
+      <br>
+      <div class="form-group">
+        <label for="userPsw">Password:</label>
+        <input type="password" class="form-control" formControlName="userPsw" id="userPsw">
+        <div *ngIf="submitted && loginForm.controls.userPsw.errors" class="error">
+          <div class="text-danger" *ngIf="loginForm.controls.userPsw.errors.required">Password is required</div>
+        </div>
+       
+      </div>
+      <br>
+      <!-- <a class="btn btn-warning" href="/add-user">login</a>   -->
+      <button class="btn btn-success">Login</button> &nbsp; &nbsp;
+      <button class="btn btn-danger" type="reset">Cancel</button>
+      <br/><br/>
+      <div *ngIf="invalidLogin" class="error">
+        <div class="text-danger">Invalid credentials.</div>
+      </div>
+      <a class="btn btn-warning" href="">Back to Home</a>  
+    </form>
+
+  </div>
+  </div>
+  

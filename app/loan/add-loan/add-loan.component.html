@@ -1,0 +1,65 @@
+
+<div class="col-md-6 col-md-offset-2">
+      <h2>Add Vehicle Information of User</h2>  
+      
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+      <h2>The Rate Of Intrest is 7.5%
+        E= P*R[ ((1+R)^n)/ (((1+R)^n)-1)]
+        P: Principal Amount
+        R: Rate of Interest per month
+        n: Tenure of loan in months
+        E: EMI </h2> 
+        
+        <div class="form-group">
+            <label for="loanId"> Loan Id:</label>
+            <input formControlName="loanId" placeholder="Loan Id" name="loanId" class="form-control" id="loanId">
+            <div *ngIf="submitted && addForm.controls.loanId.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.loanId.errors.required">Loan Id is required</div>
+              </div>
+        <div class="form-group">
+            <label for="admId">Admin Id:</label>
+            <input formControlName="admId" placeholder="Admin Id" name="admId" class="form-control" id="admId">
+            <div *ngIf="submitted && addForm.controls.admId.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.admId.errors.required">Admin Id is required</div>
+              </div>
+         <div class="form-group">
+            <label for="loanAmt"> Loan Amt:</label>
+            <input formControlName="loanAmt" placeholder="Loan Amt in Digit" name="loanAmt" class="form-control" id="loanAmt">
+            <div *ngIf="submitted && addForm.controls.loanAmt.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.loanAmt.errors.required">Loan Amount  is required</div>
+              </div>
+         <div class="form-group">
+            <label for="emi"> EMI:</label>
+            <input formControlName="emi" placeholder="EMI" name="emi" class="form-control" id="emi">
+            <div *ngIf="submitted && addForm.controls.emi.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.emi.errors.required">EMI is required</div>
+              </div>
+         <!-- <div class="form-group">
+            <label for=" loanPeriod"> Loan Period:</label>
+            <input formControlName=" loanPeriod" placeholder="LoanPreiod" name=" loanPeriod" class="form-control" id=" loanPeriod">
+            <div *ngIf="submitted && addForm.controls. loanPeriod.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls. loanPeriod.errors.required">Loan Periodis required</div>
+              </div> -->
+         <div class="form-group">
+            <label for="startDate"> Start Date:</label> 
+            <input formControlName="startDate" placeholder="DD-Mon-YY" name="startDate" class="form-control" id="startDate">
+            <div *ngIf="submitted && addForm.controls.startDate.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.startDate.errors.required">Start Date is required</div>
+              </div>
+        <div class="form-group">
+            <label for="endDate"> End Date:</label>
+            <input formControlName="endDate" placeholder="DD-Mon-YY" name="endDate" class="form-control" id="endDate">
+            <div *ngIf="submitted && addForm.controls.endDate.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.endDate.errors.required">End Date is required</div>
+              </div> 
+         
+          <br>
+          <button class="btn btn-success">Submit</button>&nbsp; &nbsp;
+          <button class="btn btn-danger" type="reset">Cancel</button>
+             &nbsp; &nbsp;
+          <a class="btn btn-warning" href="/adminPage">Back to Main Page</a> 
+      
+          <br/><br/>
+        
+    
+        </div>

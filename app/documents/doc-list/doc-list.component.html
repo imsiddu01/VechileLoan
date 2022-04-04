@@ -1,0 +1,32 @@
+<div align="center">
+
+    <h3 class="p-3 text-center">  list of Documents </h3>
+    
+    <div>
+    
+        
+    
+        <table class="table table-striped table-bordered">
+            <thead>
+                <tr>
+                    <th>DOC_ID</th>
+                    <th>ADHARCARD_NUMBER</th>
+                     <th>PAN_CARD</th>   
+                        
+                </tr>
+            </thead>
+            <tbody>
+                  <tr *ngFor="let d of listOfDocuments;">              
+                    <td> {{d.docId}} </td>
+                    <td> {{d.adharcardNumber}} </td>
+                     <td> {{d.panCard}} </td>  
+                    
+                </tr>
+            </tbody>
+        </table>
+        <br><br>
+        <a class="btn btn-warning" href="/adminPage">Back to Main Page</a>
+        <br><br>  
+    </div>
+    </div>
+    

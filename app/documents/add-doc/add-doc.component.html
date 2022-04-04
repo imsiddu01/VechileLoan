@@ -1,0 +1,40 @@
+
+     
+      <h2>Add Documents of User</h2>  
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        
+      <div class="col-md-6 col-md-offset-2">
+
+        <div class="form-group">
+            <label for="docId"> Doc Id:</label>
+            <input formControlName="docId" placeholder="Doc Id" name="docId" class="form-control" id="docId">
+            <div *ngIf="submitted && addForm.controls.docId.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.docId.errors.required">Doc Idis required</div>
+              </div>
+        <div class="form-group">
+            <label for="adharcardNumber">ADHARCARD NUMBER:</label>
+            <input formControlName="adharcardNumber" placeholder="ADHARCARD NUMBER" name="adharcardNumber" class="form-control" id="adharcardNumber">
+            <div *ngIf="submitted && addForm.controls.adharcardNumber.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.adharcardNumber.errors.required">ADHARCARD NUMBER is required</div>
+              </div>
+         <div class="form-group">
+            <label for="panCard"> PAN CARD:</label>
+            <input formControlName="panCard" placeholder="PAN CARD" name="panCard" class="form-control" id="panCard">
+            <div *ngIf="submitted && addForm.controls.panCard.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.panCard.errors.required">PAN CARD  is required</div>
+              </div>
+
+
+              <br>
+              <button class="btn btn-success">Submit</button>&nbsp; &nbsp;
+              <button class="btn btn-danger" type="reset">Cancel</button>
+                 &nbsp; &nbsp;
+                 <br><br>
+              <a class="btn btn-warning" href="/adminPage">Back to Main Page</a> 
+          
+              <br/><br/>
+            
+        
+            </div>
+
+          

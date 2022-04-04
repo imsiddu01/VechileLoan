@@ -1,0 +1,53 @@
+<div align="center"><h2>HELLO ADMIN!</h2>
+<img src="../assets/img/icon.jpg" width="250px" height="250px" />
+
+
+<div class="col-md-2 col-md-offset-2">
+
+    <h3>Login</h3>
+       <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+      <div class="form-group">
+        <label for="admId"> Admin Id:</label>
+        <input type="admId" class="form-control" formControlName="admId" id="admId" >
+       
+        <div *ngIf="submitted && loginForm.controls.admId.errors" class="error">
+          <div class="text-danger" *ngIf="loginForm.controls.admId.errors.required">Admin id is required</div>
+        </div>
+      </div>  
+      <br>
+      <div class="form-group">
+        <label for="admPsw">Password:</label>
+        <input type="password" class="form-control" formControlName="admPsw" id="admPsw">
+        <div *ngIf="submitted && loginForm.controls.admPsw.errors" class="error">
+          <div class="text-danger" *ngIf="loginForm.controls.admPsw.errors.required">Password is required</div>
+        </div>
+       
+      </div>
+
+      
+      <br>
+      <!-- <a class="btn btn-warning" href="/add-user">login</a>   -->
+      <button class="btn btn-success">Login</button> &nbsp; &nbsp;
+      <button class="btn btn-danger" type="reset">Cancel</button>
+      <br/><br/>
+      <div *ngIf="invalidLogin" class="error">
+        <div class="text-danger">Invalid credentials.</div>
+      </div>
+      
+      <a class="btn btn-warning" href="">Back to Home</a> 
+<br><br><br>
+
+    </form>
+  </div>
+  <!-- <tr>
+     <th> Select City: </th>
+    <td>
+      <select name="city">
+        <option Selected value="mumbai"> Mumbai	</option>
+        <option value="Hydrabad"> Hydrabad</option>
+        <option value="Banglore"> Banglore</option>
+        <option value="Pune"> Pune</option>
+      </select>
+    </td>
+  </tr> --> 
+  </div>

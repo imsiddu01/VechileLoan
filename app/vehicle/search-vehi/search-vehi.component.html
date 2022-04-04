@@ -1,0 +1,39 @@
+
+<div >
+    <input type="text" [(ngModel)]="vehNo" size="10" placeholder="vehicle No"/>
+    <button (click)="onSearch()" >Search</button>   
+    <div *ngIf="notFound">Vehicle not found</div>
+</div>
+
+
+<div align="center">
+<h3 class="p-3 text-center">Vehicles Record : </h3>
+
+<div>
+    
+     <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>VEH_NO</th>
+                <th>VEH_NAME</th>
+                <!-- <th>MOB_NO</th>   -->
+               
+                <th>VEH_TYPE</th> 
+            </tr>
+        </thead>
+        <tbody>
+              <tr>              
+                <td> {{vehiObj.vehNo}} </td>
+                <td> {{vehiObj.vehName}} </td>
+              
+                <td> {{vehiObj.vehType}} </td>  
+               
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <a class="btn btn-warning" href="user-List">Back to Main Page</a> 
+    <br><br> 
+</div>
+</div>
+

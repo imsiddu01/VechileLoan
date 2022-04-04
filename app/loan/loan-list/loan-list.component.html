@@ -1,0 +1,44 @@
+<div align="center">
+
+<h3 class="p-3 text-center">  list of Policies </h3>
+
+<div>
+
+    
+
+    <table class="table table-striped table-bordered">
+        <thead>
+            <tr>
+                <th>LOAN_ID</th>
+                <th>ADM_ID</th>
+                 <th>LOAN_AMT</th>   
+                <th>EMI</th>
+               
+                 <!-- <th>PERIOD</th>  -->
+                 <th>START_DATE</th>
+                 <th>END_DATE</th>
+
+                 
+            </tr>
+        </thead>
+        <tbody>
+              <tr *ngFor="let l of listOfLoan;">              
+                <td> {{l.loanId}} </td>
+                <td> {{l.admId}} </td>
+                 <td> {{l.loanAmt}} </td>  
+                <td> {{l.emi}} </td>
+               
+                <!-- <td> {{l.loanPeriod}} </td>   -->
+                <td> {{l.startDate}} </td>
+                <td> {{l.endDate}} </td>  
+                
+                                   
+               
+            </tr>
+        </tbody>
+    </table>
+    <br><br>
+    <a class="btn btn-warning" href="/adminPage">Back to Main Page</a>
+    <br><br>  
+</div>
+</div>

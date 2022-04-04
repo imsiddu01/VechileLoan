@@ -1,0 +1,50 @@
+<div align="center">
+  <h2>Add New User Details </h2>  
+<div class="col-md-2 col-md-offset-2">
+
+<!-- <div class="col-md-6 col-md-offset-2"> -->
+      
+      <form [formGroup]="addForm" (ngSubmit)="onSubmit()">
+        
+        <div class="form-group">
+            <label for="userId"> User Id:</label>
+            <input formControlName="userId" placeholder="User Id" name="userId" class="form-control" id="userId">
+            <div *ngIf="submitted && addForm.controls.userId.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.userId.errors.required">UserId is required</div>
+              </div>
+          </div>     
+          <div class="form-group">
+            <label for="userName"> User name:</label>
+            <input formControlName="userName" placeholder="User Name" name=" userName" class="form-control" id=" userName">
+            <div *ngIf="submitted && addForm.controls.userName.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.userName.errors.required"> user Name is required</div>
+              </div>
+          </div>     
+          <div class="form-group">
+            <label for=" userDob">  User Dob:</label>
+            <input formControlName="userDob" placeholder="DD-MONTH(JAN)-YY" name=" userDob" class="form-control" id=" userName">
+            <div *ngIf="submitted && addForm.controls.userDob.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.userDob.errors.required"> user Dob is required</div>
+              </div>
+          </div>   
+          <div class="form-group">
+            <label for="password"> User Psw:</label>
+            <input formControlName="userPsw" placeholder="User Psw" name="userPsw" class="form-control" id="userPsw">
+            <div *ngIf="submitted && addForm.controls.userPsw.errors" class="error">
+                <div class="text-danger" *ngIf="addForm.controls.userPsw.errors.required"> user psw is required</div>
+              </div>
+          </div>   
+          <br>
+          <button class="btn btn-success">Submit</button>&nbsp; &nbsp;
+          <button class="btn btn-danger" type="reset">Cancel</button>
+             &nbsp; &nbsp;
+             <br><br>
+          <a class="btn btn-warning" href="/user-list">Back to Main Page</a> 
+      
+          <br/><br/>
+        
+        </form>
+        </div>
+        </div>
+        
+        
